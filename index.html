@@ -38,11 +38,12 @@
 			myRecord.save(null,{
 				success:function(myRecord){
 					document.getElementById("jstj").reset(); 
+					document.getElementById("mypell").style.display = "block";
 					document.getElementById("message1").innerHTML = "姓名："+nameJ;
-					document.getElementById("message2").innerHTML = "分数："+gradeJ;
+					document.getElementById("message2").innerHTML = "分数："+gradeJ+"分";
 					document.getElementById("message3").innerHTML = "用时："+usetimeJ;
-					document.getElementById("message4").innerHTML = "次数："+numofsubmitJ;
-					document.getElementById("message5").innerHTML = "累计得分："+totalscoreJ;
+					document.getElementById("message4").innerHTML = "次数："+numofsubmitJ+"次";
+					document.getElementById("message5").innerHTML = "累计得分："+totalscoreJ+"分";
 					document.getElementById("message6").innerHTML = "参与日期："+dateJ;
 					alert("添加成功！");
 					
@@ -120,7 +121,7 @@
                 
             </form>
 			
-			<div class="panel panel-default">
+			<div class="panel panel-default" style="display:none" id="mypell" >
 				<div class="panel-body" id="message1">
 					
 				</div>
