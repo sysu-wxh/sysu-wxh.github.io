@@ -12,11 +12,13 @@
 </script>
 <script>
 	function sendDate(){
+		var mydate = new Date();
 		var nameJ = document.forms["jstj"]["name_input"].value;
 		var gradeJ = document.forms["jstj"]["grade_input"].value;
 		var timeminJ = document.forms["jstj"]["usetimeofmin_input"].value;
 		var timesecJ = document.forms["jstj"]["usetimeofsec_input"].value;
 		var usetimeJ = timeminJ +"分"+timesecJ+"秒";
+		var dateJ = mydate.getMonth()+"月"+mydate.getDate()+"日";
 		var numofsubmitJ = document.forms["jstj"]["numOfSubmit_input"].value;
 		var totalscoreJ = document.forms["jstj"]["totalScore_input"].value;
 		if(nameJ!=""&&gradeJ!=""&&timeminJ!=""&&timesecJ!=""&&numofsubmitJ!=""&&totalscoreJ!=""){
@@ -27,6 +29,7 @@
 			myRecord.set("UseTime",usetimeJ);
 			myRecord.set("NumOfSubmit",numofsubmitJ);
 			myRecord.set("TotalScore",totalscoreJ)
+			myRecord.set("Date",dateJ);
 			myRecord.save(null,{
 				success:function(myRecord){
 					alert("添加成功！");
