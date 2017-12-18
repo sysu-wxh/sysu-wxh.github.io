@@ -32,8 +32,9 @@
 			myRecord.set("Date",dateJ);
 			myRecord.save(null,{
 				success:function(myRecord){
-					alert("添加成功！");
 					document.getElementById("jstj").reset(); 
+					alert("添加成功！");
+					
 				},
 				error:function(myRecord,error){
 					alert("添加失败！");
