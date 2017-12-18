@@ -22,7 +22,7 @@
 		var dateJ = (mydate.getMonth()+1)+"月"+mydate.getDate()+"日";
 		var numofsubmitJ = document.forms["jstj"]["numOfSubmit_input"].value;
 		var totalscoreJ = document.forms["jstj"]["totalScore_input"].value;
-		var userinfoJ = navigator.userAgent;
+		//var userinfoJ = navigator.userAgent;
 		var useripJ = returnCitySN["cip"]+','+returnCitySN["cname"];
 		if(nameJ!=""&&gradeJ!=""&&timeminJ!=""&&timesecJ!=""&&numofsubmitJ!=""&&totalscoreJ!=""){
 			var JingsaiRecord = Bmob.Object.extend("JingsaiRecord");
@@ -33,7 +33,7 @@
 			myRecord.set("NumOfSubmit",numofsubmitJ);
 			myRecord.set("TotalScore",totalscoreJ)
 			myRecord.set("Date",dateJ);
-			myRecord.set("UserInfo",userinfoJ);
+			//myRecord.set("UserInfo",userinfoJ);
 			myRecord.set("UserIp",useripJ);
 			myRecord.save(null,{
 				success:function(myRecord){
