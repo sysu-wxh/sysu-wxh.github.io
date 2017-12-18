@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
+<title>知识竞赛成绩统计</title>
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <script src="./js/jquery.js"></script>
 <script src="./js/bootstrap.min.js"></script>
@@ -33,6 +33,7 @@
 			myRecord.save(null,{
 				success:function(myRecord){
 					alert("添加成功！");
+					$("input[type=reset]").trigger("click");  
 				},
 				error:function(myRecord,error){
 					alert("添加失败！");
@@ -96,7 +97,7 @@
                     </div>
                     	
                 </div>
-                
+                <input type="reset" style="display:none;" />  
                 <div class="form-group">
     				<div class="col-sm-offset-5 col-sm-10">
      					 <button id="fat-btn" class="btn btn-primary" name="btn_submit"  onclick="sendDate()" type="button"> 提交</button>
