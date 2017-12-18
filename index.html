@@ -38,6 +38,12 @@
 			myRecord.save(null,{
 				success:function(myRecord){
 					document.getElementById("jstj").reset(); 
+					document.getElementById("message1").innerHTML = "姓名："+nameJ;
+					document.getElementById("message2").innerHTML = "分数："+gradeJ;
+					document.getElementById("message3").innerHTML = "用时："+usetimeJ;
+					document.getElementById("message4").innerHTML = "次数："+numofsubmitJ;
+					document.getElementById("message5").innerHTML = "累计得分："+totalscoreJ;
+					document.getElementById("message6").innerHTML = "参与日期："+dateJ;
 					alert("添加成功！");
 					
 				},
@@ -60,8 +66,6 @@
 		<div class="col-md-4 column">
 		</div>
 		<div class="col-md-4 column">
-			<br/>
-			<br/>
 			<h2 class="text-center col-sm-offset-1">知识竞赛成绩统计</h2>
 			<br/>
         	<form class="form-horizontal" name="jstj" id="jstj" role="form">
@@ -115,6 +119,27 @@
  				 </div>   
                 
             </form>
+			
+			<div class="panel panel-default">
+				<div class="panel-body" id="message1">
+					
+				</div>
+				<div class="panel-body" id="message2">
+					
+				</div>
+				<div class="panel-body" id="message3">
+					
+				</div>
+				<div class="panel-body" id="message4">
+					
+				</div>
+				<div class="panel-body" id="message5">
+					
+				</div>
+				<div class="panel-body" id="message6">
+					
+				</div>
+			</div>
             
 			
 		</div>
