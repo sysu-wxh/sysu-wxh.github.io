@@ -95,12 +95,15 @@
 </head>
 
 <body>
+<div class="jumbotron">
 
 <div class="container">
 	<div class="row clearfix">
-		<div class="col-md-4 column">
+		<div class="col-md-1 column">
 		</div>
-		<div class="col-md-4 column">
+		<div class="col-md-1 column">
+		</div>
+		<div class="col-md-8 column">
 			<h2 class="text-center col-sm-offset-1">知识竞赛成绩统计</h2>
 			<br/>
         	<form class="form-horizontal" name="jstj" id="jstj" role="form">
@@ -148,14 +151,41 @@
                 </div>
                 
                 <div class="form-group">
-    				<div class="col-sm-offset-5 col-sm-10">
+    				<div class="col-sm-offset-6 col-sm-10">
      					 <button id="fat-btn" class="btn btn-primary" name="btn_submit"  onclick="sendDate()" type="button"> 提交</button>
    					 </div>
  				 </div>   
                 
             </form>
 			
-			<div class="panel panel-default" style="display:none" id="mypell" >
+			
+            
+			
+		</div>
+		<div class="col-md-1 column">
+        
+		</div>
+		<div class="col-md-1 column">
+		</div>
+	</div>
+</div>
+</div>
+
+<!-- 模态框（Modal） -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				</button>
+				<h4 class="modal-title" id="myModalLabel">
+					提交成功，以下内容为您所提交的数据！
+				</h4>
+			</div>
+			<div class="modal-body">
+				
+				<div class="panel panel-default" style="display:none" id="mypell" >
 				<div class="panel-body" id="message1">
 					
 				</div>
@@ -175,29 +205,6 @@
 					
 				</div>
 			</div>
-            
-			
-		</div>
-		<div class="col-md-4 column">
-        
-		</div>
-	</div>
-</div>
-
-<!-- 模态框（Modal） -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	<div class="modal-dialog">
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
-					&times;
-				</button>
-				<h4 class="modal-title" id="myModalLabel">
-					添加成功！
-				</h4>
-			</div>
-			<div class="modal-body">
-				您的数据已成功提交后台，以下内容为您所提交的数据！
 			</div>
 			<div class="modal-footer">
 				<button type="button" class="btn btn-default" data-dismiss="modal">确定
